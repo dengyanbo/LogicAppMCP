@@ -23,7 +23,8 @@ public class AzureAuthenticationService : IAzureAuthenticationService
         try
         {
             var token = await _credential.GetTokenAsync(
-                new TokenRequestContext(new[] { "https://management.azure.com/.default" }));
+                new TokenRequestContext(new[] { "https://management.azure.com/.default" }),
+                CancellationToken.None);
 
             return token.Token;
         }

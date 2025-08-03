@@ -77,7 +77,7 @@ public class LogicAppMCPServer
                                 description = "Azure subscription ID"
                             }
                         },
-                        required = new[] { "resourceGroupName", "subscriptionId" }
+                        required = new string[] { "resourceGroupName", "subscriptionId" }
                     }
                 },
                 new
@@ -110,7 +110,7 @@ public class LogicAppMCPServer
                                 description = "Number of runs to retrieve (default: 10)"
                             }
                         },
-                        required = new[] { "logicAppName", "resourceGroupName", "subscriptionId" }
+                        required = new string[] { "logicAppName", "resourceGroupName", "subscriptionId" }
                     }
                 },
                 new
@@ -143,7 +143,7 @@ public class LogicAppMCPServer
                                 description = "Azure subscription ID"
                             }
                         },
-                        required = new[] { "runName", "logicAppName", "resourceGroupName", "subscriptionId" }
+                        required = new string[] { "runName", "logicAppName", "resourceGroupName", "subscriptionId" }
                     }
                 }
             }
@@ -183,13 +183,13 @@ public class LogicAppMCPServer
         return JsonSerializer.SerializeToElement(runDetails);
     }
 
-    private async Task<JsonElement> GetActionDetailsAsync(JsonElement parameters)
+    private Task<JsonElement> GetActionDetailsAsync(JsonElement parameters)
     {
         // Implementation for getting action details
         throw new NotImplementedException();
     }
 
-    private async Task<JsonElement> GetTriggerDetailsAsync(JsonElement parameters)
+    private Task<JsonElement> GetTriggerDetailsAsync(JsonElement parameters)
     {
         // Implementation for getting trigger details
         throw new NotImplementedException();
