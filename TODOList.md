@@ -1,38 +1,148 @@
-Project To‑Do List
-Establish project scope and requirements
-Review Model Context Protocol (MCP) and define supported AI models.
+Planning and Scope
+Define project scope and objectives – Clarify the features (e.g. server integration, error diagnostics) and supported AI models.
 
-Decide on diagnostic capabilities and overall goals.
+Responsible: Project Owner
 
-Plan and research external APIs
-Identify necessary Azure and Graph API endpoints.
+Due: 2025‑08‑07
 
-Define authentication strategy.
+Priority: High
 
-Set up development environment
-Install required tooling and initialize the project repository.
+Research external APIs – Identify Azure App Service (Logic App Standard) endpoints and Graph API calls needed; plan authentication strategy
+adobe.com
+.
 
-Build the MCP server
-Create a .NET console project and add MCP and hosting libraries.
+Responsible: Project Owner
 
-Configure the MCP server and implement diagnostic tools.
+Due: 2025‑08‑10
 
-Add client integration
-Create configuration for VS Code and register the MCP server.
+Priority: High
 
-Test tools through Copilot’s agent mode.
+Environment Setup
+Install development tools – Install the .NET SDK, Visual Studio Code (with MCP/Copilot extensions), and initialize a Git repository.
 
-Extend functionality
-Add Microsoft Graph or other API integrations.
+Responsible: Project Owner
 
-Implement additional diagnostic or remediation tools.
+Due: 2025‑08‑05
 
-Test and document
-Write tests and document usage instructions.
+Priority: High
 
-Provide example scenarios for running the tools.
+Create project structure – Set up folders for server code, client configuration and documentation.
 
-Deployment and maintenance
-Plan deployment strategy and logging.
+Responsible: Project Owner
 
-Outline future enhancements and backlog items.
+Due: 2025‑08‑05
+
+Priority: Medium
+
+Server Implementation
+Initialize .NET console project – Create the project and install necessary NuGet packages: ModelContextProtocol, Microsoft.Extensions.Hosting, Azure.Identity, Azure.ResourceManager.AppService.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑07
+
+Priority: High
+
+Dependencies: Environment setup complete
+
+Configure MCP server – Register the MCP server with your preferred transport (stdio/SSE/HTTP) and scaffold tool methods.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑12
+
+Priority: High
+
+Implement diagnostic tools – Write MCP tool methods to list runs, fetch run details and action inputs/outputs using Azure REST calls
+adobe.com
+.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑17
+
+Priority: High
+
+Dependencies: MCP server configured
+
+Integrate Graph API (optional) – If your design requires Graph data, implement additional tool methods and handle authentication.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑20
+
+Priority: Medium
+
+Client Integration
+Create VS Code server configuration – Generate .vscode/mcp.json and register the MCP server for testing with Copilot.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑18
+
+Priority: Medium
+
+Dependencies: Server implementation
+
+Test tool invocation – Verify that your MCP tools can be discovered and executed via Copilot’s agent mode.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑20
+
+Priority: Medium
+
+Testing and Documentation
+Develop unit/integration tests – Write tests to validate API calls, data parsing and error-handling logic.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑22
+
+Priority: Medium
+
+Document usage and examples – Write setup instructions, sample prompts and explain tool parameters. Make the documentation easy to access
+adobe.com
+.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑24
+
+Priority: Medium
+
+Deployment and Maintenance
+Plan packaging and deployment – Decide on local or containerized deployment, configure environment variables and secrets handling.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑24
+
+Priority: Low
+
+Set up logging/monitoring – Implement logging for MCP requests and Azure calls; plan how to monitor performance.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑24
+
+Priority: Low
+
+Define backlog and enhancements – Capture future ideas (e.g. new tools, improved diagnostics) and prioritize them.
+
+Responsible: Project Owner
+
+Due: 2025‑08‑24
+
+Priority: Low
+
+Review and Iteration
+Regular updates – Review progress, update tasks and adjust deadlines as needed
+adobe.com
+.
+
+Responsible: Project Owner
+
+Due: Weekly
+
+Priority: Medium
