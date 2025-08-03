@@ -55,7 +55,7 @@ public class LogicAppMCPServer
     {
         var schema = new
         {
-            tools = new[]
+            tools = new object[]
             {
                 new
                 {
